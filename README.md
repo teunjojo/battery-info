@@ -22,3 +22,4 @@ OPTIONS:
     
     -h  Show this message
     
+This script depends on [UPower](https://upower.freedesktop.org) which is most likely preinstalled.
