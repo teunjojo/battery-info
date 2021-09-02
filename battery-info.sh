@@ -30,7 +30,7 @@ percentage=$(awk -vn="$charge_now" -vm="$(awk -vn="$charge_full" 'BEGIN{print(n/
 [[ $percentage -gt 100 ]] && percentage=100
 capacity=$(awk -vn="$charge_now" -vm="$(awk -vn="$charge_full_design" 'BEGIN{print(n/100)}')" 'BEGIN{printf("%.0f\n",n/m)}')
 status=$(cat $dir/status)
-version="$0 v1.0.1"
+version="$0 v1.1"
 
 while :; do
     case "${1-}" in
