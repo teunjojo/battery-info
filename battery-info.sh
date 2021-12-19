@@ -1,5 +1,4 @@
 #!/bin/bash
-
 version=1.1
 
 usage()
