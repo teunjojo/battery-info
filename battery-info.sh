@@ -1,5 +1,7 @@
 #!/bin/bash
 
+version=1.1
+
 usage()
 {
 cat << EOF
@@ -30,13 +32,12 @@ percentage=$(awk -vn="$charge_now" -vm="$(awk -vn="$charge_full" 'BEGIN{print(n/
 [[ $percentage -gt 100 ]] && percentage=100
 capacity=$(awk -vn="$charge_now" -vm="$(awk -vn="$charge_full_design" 'BEGIN{print(n/100)}')" 'BEGIN{printf("%.0f\n",n/m)}')
 status=$(cat $dir/status)
-version="$0 v1.1"
 
 while :; do
     case "${1-}" in
     -h | --help) usage
     exit ;;
-    -v | --version) output=$version;;
+    -v | --version) output="$0 v$version";;
     -p) output=$percentage ;;
     -c) output=$capacity ;;
     -P) output=$percentage% ;;
