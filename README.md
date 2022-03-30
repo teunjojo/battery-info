@@ -1,3 +1,4 @@
+[![button](https://files.teunjojo.com/theme/download-button.svg)](https://files.teunjojo.com/updateMC/latest/updateMC.sh)
 # battery-info
 Shell script that shows battery info like battery health, charging state and battery percentage
 
